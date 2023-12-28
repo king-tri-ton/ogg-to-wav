@@ -58,6 +58,10 @@ The GUI application uses the `config.ini` file to store configuration settings. 
 - PyQt5
 - FFmpeg
 
+## License
+
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License.
+
 ## Acknowledgments
 
 This project is created by King Triton. Visit the [GitHub repository](https://github.com/king-tri-ton/ogg-to-wav) for more information and updates.
