@@ -58,6 +58,10 @@ The GUI application uses the `config.ini` file to store configuration settings. 
 - PyQt5
 - FFmpeg
 
+## Release Information
+
+The FFmpeg executable (`ffmpeg.exe`) and the executable file of the conversion application (`app.exe`) can be found in the archive `dist.zip` for version 1.0.0. Access the release [here](https://github.com/king-tri-ton/ogg-to-wav/releases/tag/v1.0.0).
+
 ## License
 
 This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License.
