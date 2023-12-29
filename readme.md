@@ -1,5 +1,7 @@
 # Ogg to WAV Converter
 
+![Screenshot](https://github.com/king-tri-ton/ogg-to-wav/assets/53092931/01e0297d-1d69-4a58-b203-ea7444cb8776)
+
 This project provides a simple Ogg to WAV conversion tool with both a command-line interface and a graphical user interface (GUI). The conversion process utilizes the FFmpeg library.
 
 ## File Descriptions
