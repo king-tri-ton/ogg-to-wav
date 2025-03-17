@@ -19,10 +19,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.13.1'
-
-    - name: Check if requirements file exists
-      run: if not exist requirements.txt echo "requirements.txt not found!" && exit 1
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
@@ -32,7 +29,7 @@ jobs:
 
     - name: Build EXE
       run: |
-        pyinstaller --onefile --noconsole --name="OGG-to-WAV" --clean gui/app.py
+        pyinstaller --onefile --noconsole --name="OGG-to-WAV" gui/app.py
       env:
         PYTHONIOENCODING: utf-8
 
@@ -41,9 +38,6 @@ jobs:
       with:
         name: OGG-to-WAV
         path: dist/OGG-to-WAV.exe
-
-    - name: Check VirusTotal API Key
-      run: if [ -z "${{ secrets.VIRUSTOTAL_API_KEY }}" ]; then echo "Missing VirusTotal API key"; exit 1; fi
 
     - name: VirusTotal GitHub Action
       uses: crazy-max/ghaction-virustotal@v4.0.0
