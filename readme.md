@@ -1,75 +1,57 @@
-# Ogg to WAV Converter
+# OGG to WAV Converter
 
-![Screenshot](https://github.com/king-tri-ton/ogg-to-wav/assets/53092931/01e0297d-1d69-4a58-b203-ea7444cb8776)
+OGG to WAV Converter — это инструмент для конвертации аудиофайлов из формата OGG в WAV. Проект включает в себя консольное и графическое (GUI) приложения.
 
-This project provides a simple Ogg to WAV conversion tool with both a command-line interface and a graphical user interface (GUI). The conversion process utilizes the FFmpeg library.
+## Структура проекта
 
-## File Descriptions
-
-### 1. Main Converter Script
-
-#### `project/main.py`
-
-This Python script (`main.py`) serves as the core converter module. It contains a function `convert_ogg_to_wav` that converts an Ogg file to WAV format using the FFmpeg tool. The script also includes a sample usage demonstrating the conversion of a specific Ogg file.
-
-### 2. GUI Application
-
-#### `project/gui/app.py`
-
-This script (`app.py`) defines a PyQt5-based GUI application for the Ogg to WAV converter. Users can select an Ogg file through the GUI, configure conversion settings, and initiate the conversion process. The application displays conversion logs and includes links to the project's GitHub repository.
-
-### 3. Configuration File
-
-#### `project/gui/config.ini`
-
-This configuration file (`config.ini`) is used by the GUI application to store user-defined settings. The file includes paths for the output folder and the FFmpeg executable.
-
-## Usage
-
-### Main Script Usage
-
-Execute `main.py` to convert a specific Ogg file to WAV format. Modify the script to suit your needs, specifying the input (`ogg_file_path`) and output (`wav_file_path`) file paths.
-
-```bash
-python main.py
+```
+ogg-to-wav/
+├── main.py    # Консольное приложение
+└── gui/
+    └── app.py  # Графическое приложение (GUI)
 ```
 
-### GUI Application Usage
+## Возможности
+- Конвертация аудиофайлов из OGG в WAV с помощью FFmpeg
+- Автоматическая загрузка и установка FFmpeg при необходимости
+- Графический интерфейс на PyQt5
+- Консольная версия для использования в терминале
 
-Run the GUI application (`app.py`) to access a user-friendly interface for Ogg to WAV conversion. Follow these steps:
+## Установка и запуск
 
-1. Launch the application using the following command:
+### 1. Установка зависимостей
+Перед использованием установите необходимые библиотеки:
+```sh
+pip install -r requirements.txt
+```
 
-    ```bash
-    python app.py
-    ```
+### 2. Консольное приложение
+Запуск консольного конвертера:
+```sh
+python main.py путь_к_ogg [путь_для_сохранения]
+```
+Пример:
+```sh
+python main.py input.ogg output.wav
+```
 
-2. Click the "Browse" button to select an Ogg file.
+### 3. Графическое приложение (GUI)
+Запуск GUI-приложения:
+```sh
+python gui/app.py
+```
 
-3. Click the "Convert" button to initiate the conversion process.
+## Требования
+- Python 3.8+
+- FFmpeg (скачивается автоматически при запуске, если отсутствует)
+- PyQt5 (для GUI-версии)
 
-4. View the conversion progress and logs in the text area.
+## Скриншоты
+![Screenshot_61](https://github.com/user-attachments/assets/5d08e539-8ef1-4a7c-80f7-738c7464bd4c)
+![Screenshot_62](https://github.com/user-attachments/assets/3fa4ec45-3f61-42b4-bead-3b7ae103bc54)
 
-## Configuration
+## Лицензия
+Проект распространяется по лицензии [MIT](https://choosealicense.com/licenses/mit/).
 
-The GUI application uses the `config.ini` file to store configuration settings. Modify the paths in the `[Paths]` section to specify the output folder (`output_folder`) and the path to the FFmpeg executable (`ffmpeg_path`).
-
-## Dependencies
-
-- Python 3.x
-- PyQt5
-- FFmpeg
-
-## Release Information
-
-The FFmpeg executable (`ffmpeg.exe`) and the executable file of the conversion application (`app.exe`) can be found in the archive `dist.zip` for version 1.0.0. Access the release [here](https://github.com/king-tri-ton/ogg-to-wav/releases/tag/v1.0.0).
-
-## License
-
-This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License.
-
-## Acknowledgments
-
-This project is created by King Triton. Visit the [GitHub repository](https://github.com/king-tri-ton/ogg-to-wav) for more information and updates.
-
-© 2023 King Triton. All rights reserved.
+## Автор
+Разработчик: **King Triton**
